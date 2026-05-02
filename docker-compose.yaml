@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:alpine
+    restart: always
+    container_name: tanstack-boilerplate-db
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - 5432:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - tanstack-boilerplate
+
+  mailpit:
+    image: axllent/mailpit
+    restart: always
+    container_name: tanstack-boilerplate-mail
+    ports:
+      - 8025:8025
+      - 1025:1025
+    networks:
+      - tanstack-boilerplate
+
+volumes:
+  db-data:
+
+networks:
+  tanstack-boilerplate:

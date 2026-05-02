@@ -1,0 +1,77 @@
+{
+  "name": "tanstack-boilerplate",
+  "type": "module",
+  "private": true,
+  "imports": {
+    "~/*": "./src/*"
+  },
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:pull": "drizzle-kit pull",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.4.1",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/noto-sans": "^5.2.10",
+    "@t3-oss/env-core": "^0.13.11",
+    "@tailwindcss/vite": "^4.2.4",
+    "@tanstack/react-devtools": "^0.10.2",
+    "@tanstack/react-form": "^1.29.1",
+    "@tanstack/react-query": "^5.100.8",
+    "@tanstack/react-query-devtools": "^5.100.8",
+    "@tanstack/react-router": "^1.169.1",
+    "@tanstack/react-router-devtools": "^1.166.13",
+    "@tanstack/react-router-ssr-query": "^1.166.12",
+    "@tanstack/react-start": "^1.167.59",
+    "@tanstack/router-plugin": "^1.167.32",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.2",
+    "lucide-react": "^1.14.0",
+    "nitro": "npm:nitro-nightly@3.0.1-20260501-164602-aee73f19",
+    "pg": "^8.20.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "shadcn": "^4.6.0",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.4",
+    "tw-animate-css": "^1.4.0",
+    "zod": "^4.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.12",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tanstack/devtools-vite": "^0.6.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^25.6.0",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
+    "jsdom": "^29.1.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "ultracite": "7.6.2",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lightningcss"
+    ]
+  }
+}

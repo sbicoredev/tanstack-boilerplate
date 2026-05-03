@@ -1,11 +1,22 @@
 {
-  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**/src/**/*",
+      "**/.vscode/**/*",
+      "**/index.html",
+      "**/vite.config.ts",
+      "!**/src/routeTree.gen.ts",
+      "!**/src/styles.css"
+    ]
+  },
   "linter": {
     "rules": {
       "recommended": true,
       "style": {
-        "useImportType": "off",
+        "useImportType": "on",
         "noParameterProperties": "off",
         "noInferrableTypes": "off",
         "useConsistentTypeDefinitions": "off",
